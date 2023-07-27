@@ -31,27 +31,27 @@
         </div>
     </header>
 
-    <script src="js/main.js"></script>
-
+    
     <!-- MAIN -->
-    <main>
+    <main class="main-content">
         <div class="container">
 
             <form class="countries-search-form" action="https://echo.htmlacademy.ru">
-                <input class="countries-search" type="search" id="search-input" placeholder="Search for a country…">
-            </form>
-
-            <select name="select" id="main-select" >
-                <option  value="Region">Filter by Region</option>
-                    <option value="Africa">Africa</option>
-                    <option value="America">America</option>
-                    <option value="Asia">Asia</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Oceania">Oceania</option>
-                </select>
-
+                <span class="search"><input class="countries-search" type="search" id="search-input" placeholder="Search for a country…">
+                
+                <select class="search-select" name="select" id="main-select" >
+                    <option  value="Region">Filter by Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="America">America</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                    </span>
+                </form>
             </div>
         </main>
-
+        
+        <script src="js/main.js"></script>
 </body>
 </html>
