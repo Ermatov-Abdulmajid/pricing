@@ -1,88 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- <a href=""></a>   <!-- STYLES -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    
-    <main class="container main-content">
-        <h1 class="our-pricing-heading">Our Pricing</h1>
-        <form class="pricing-form-switch" action="https://echo.htmlacademy.ru" method="get">
-            <div class="switch">
-                <input class="switch-input-annual visually-hidden" type="radio" name="payment" value="annual" id="annual-payment">
-                <input class="switch-input-monthly visually-hidden" type="radio" name="payment" checked value="monthly" id="monthly-payment">
-                <label class="switch-label" for="annual-payment">Annally</label>
-                <!-- SWITCH-CONTROL -->
-                <div class="switch-control">
-                    <div class="switch-control-inner"></div>
-                    <label class="switch-control-annual" for="annual-payment"></label>
-                    <label class="switch-control-monthly" for="monthly-payment"></label>
-                </div>
-                
-                <label class="switch-label" for="monthly-payment">Monthly</label>
-            </div>
-        </form>
-        
-        <!-- SECTION-PRICE -->
-        <ul class="price-list">
-            
-            <li class="price-list-item">
-                <div class="price-wrapper" data-payment-annually="199.99" data-month="19.99">
-                    <h2 class="price-title">Basic</h2>
-                    <p class="price">19.99</p>
-                    <hr class="price-divider">
-                    <p class="price-text">500 GB Storage</p>
-                    <hr class="price-divider">
-                    <p class="price-text">2 Users Allowed</p>
-                    <hr class="price-divider">
-                    <p class="price-text">Send up to 3 GB</p>
-                    <hr class="price-divider">
-                    <a class="price-link" href="#">Learn more</a>
-                </div>
-            </li>
-            
-            <li class="price-list-item">
-                <div class="price-wrapper-premium"data-payment-annually="249.99" data-month="24.99">
-                    <h2 class="price-title-premium">Professional</h2>
-                    <p class="price-premium">24.99</p>
-                    <hr class="price-divider-premium">
-                    <p class="price-text-premium">1 TB Storage</p>
-                    <hr class="price-divider-premium">
-                    <p class="price-text-premium">5 Users Allowed</p>
-                    <hr class="price-divider-premium">
-                    <p class="price-text-premium">Send up to 10 GB</p>
-                    <hr class="price-divider-premium">
-                    <a class="price-link-premium" href="#">Learn more</a>
-                </div>
-            </li>
-            
-            <li class="price-list-item">
-                <div class="price-wrapper-div" data-payment-annually="399.99" data-month="39.99">
-                    <h2 class="price-title">Master</h2>
-                    <p class="price">39.99</p>
-                    <hr class="price-divider">
-                    <p class="price-text">2 TB Storage</p>
-                    <hr class="price-divider">
-                    <p class="price-text">10 Users Allowed</p>
-                    <hr class="price-divider">
-                    <p class="price-text">Send up to 20 GB</p>
-                    <hr class="price-divider">
-                    <a class="price-link" href="#">Learn more</a>
-                </div>
-            </li>
-            
-        </ul>
-    </main> 
-    
-    <script src="js/main.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing component</title>
 
-</body>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="main-content">
+      <div class="page container">
+        <h1 class="page-title">Our Pricing</h1>
+        <form
+          class="pricing-switch"
+          action="https://echo.htmlacademy.ru"
+          method="GET">
+          <!-- Switch -->
+          <div class="switch">
+            <!-- Switch radios -->
+            <input
+              class="switch-input-annual visually-hidden"
+              type="radio"
+              name="payment_period"
+              value="annual"
+              id="annual-payment-radio" />
+            <input
+              class="switch-input-monthly visually-hidden"
+              type="radio"
+              name="payment_period"
+              value="monthly"
+              id="monthly-payment-radio"
+              checked />
+
+            <label class="switch-label" for="annual-payment-radio"
+              >Annually</label
+            >
+            <!-- Switch control -->
+            <div class="switch-control">
+              <div class="switch-circle"></div>
+              <label
+                class="switch-control-annual"
+                for="annual-payment-radio"></label>
+              <label
+                class="switch-control-monthly"
+                for="monthly-payment-radio"></label>
+            </div>
+
+            <label class="switch-label" for="monthly-payment-radio"
+              >Monthly</label
+            >
+          </div>
+        </form>
+
+        <section class="pricing">
+          <h2 class="visually-hidden">Pricing</h2>
+          <div class="pricing-inner">
+            <section
+              class="pricing-plan"
+              data-payment-annual="199.99"
+              data-payment-monthly="19.99">
+              <h3 class="pricing-plan-title">Basic</h3>
+              <div class="pricing-plan-price">
+                <span class="pricing-plan-currency">$</span>
+                <span class="pricing-plan-value">19.99</span>
+              </div>
+              <ul class="pricing-plan-features">
+                <li class="pricing-plan-feature">500 GB Storage</li>
+                <li class="pricing-plan-feature">2 Users Allowed</li>
+                <li class="pricing-plan-feature">Send up to 3 GB</li>
+              </ul>
+              <a class="button button-block button-primary" href="#"
+                >Learn more</a
+              >
+            </section>
+
+            <section
+              class="pricing-plan pricing-plan-best"
+              data-payment-annual="249.99"
+              data-payment-monthly="24.99">
+              <h3 class="pricing-plan-title">Professional</h3>
+              <div class="pricing-plan-price">
+                <span class="pricing-plan-currency">$</span>
+                <span class="pricing-plan-value">24.99</span>
+              </div>
+              <ul class="pricing-plan-features">
+                <li class="pricing-plan-feature">1 TB Storage</li>
+                <li class="pricing-plan-feature">5 Users Allowed</li>
+                <li class="pricing-plan-feature">Send up to 10 GB</li>
+              </ul>
+              <a class="button button-block button-white" href="#"
+                >Learn more</a
+              >
+            </section>
+
+            <section
+              class="pricing-plan"
+              data-payment-annual="399.99"
+              data-payment-monthly="39.99">
+              <h3 class="pricing-plan-title">Master</h3>
+              <div class="pricing-plan-price">
+                <span class="pricing-plan-currency">$</span>
+                <span class="pricing-plan-value">39.99</span>
+              </div>
+              <ul class="pricing-plan-features">
+                <li class="pricing-plan-feature">2 TB Storage</li>
+                <li class="pricing-plan-feature">10 Users Allowed</li>
+                <li class="pricing-plan-feature">Send up to 20 GB</li>
+              </ul>
+              <a class="button button-block button-primary" href="#"
+                >Learn more</a
+              >
+            </section>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
